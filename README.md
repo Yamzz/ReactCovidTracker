@@ -1,7 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 A small covid tracker app making use of react components
-
 
 ## Available Scripts
 
