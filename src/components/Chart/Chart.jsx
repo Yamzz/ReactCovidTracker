@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { fetchDailyData } from '../../api';
 import { Line, Bar } from 'react-chartjs-2';
 import styles from './Chart.module.css';
-import { amber } from '@material-ui/core/colors';
 
 function Chart({ data: { confirmed, recovered, deaths }, country }) {
   const [dailyData, setDailyData] = useState({});
@@ -61,7 +60,9 @@ function Chart({ data: { confirmed, recovered, deaths }, country }) {
   ) : null;
 
   return (
-    <div className={styles.container}>{country ? barChart : lineChart}</div>
+    <div className={styles.container}>
+      {country && country !== 'global' ? barChart : lineChart}
+    </div>
   );
 }
 
